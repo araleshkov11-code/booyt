@@ -7,10 +7,10 @@ from decouple import config
 from telethon import TelegramClient
 
 # Конфиг
-API_ID: int = int(config("API_ID"))
-API_HASH: str = config("API_HASH")
-BOT_TOKEN: str = config("BOT_TOKEN")
-ADMIN_ID_LIST: List[int] = list(map(int, map(str.strip, config("ADMIN_ID_LIST").split(","))))  # <-- Вставить ID разрешенных телеграмм аккаунтов через запятую
+API_ID: int = int(config("24880262"))
+API_HASH: str = config("ebdd405b1c2a575113d85f10589cf590")
+BOT_TOKEN: str = config("8223183597:AAFEAKIzWOQx99LBDGv_l_CGBP6z8nefd6Q")
+ADMIN_ID_LIST: List[int] = list(map(int, map(str.strip, config("8583684376").split(","))))  # <-- Вставить ID разрешенных телеграмм аккаунтов через запятую
 bot: TelegramClient = TelegramClient("bot", API_ID, API_HASH)
 conn: sqlite3.Connection = sqlite3.connect("sessions.db", timeout=30.0)
 
